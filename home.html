@@ -164,6 +164,11 @@
                             let option = document.createElement("option")
                             option.text = value["capital"]
                             var select = document.getElementById("inputCity")
+                            var child = select.lastElementChild
+                            while(child){
+                                select.removeChild(child)
+                                child = select.lastElementChild
+                            }
                             select.appendChild(option)
                            // console.log(option)
                         }
